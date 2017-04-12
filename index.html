@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS App</title>
+	<link rel="stylesheet" href="content/css/bootstrap.css">
+</head>
+<body onload="fetchIssues()">
+	<div class="container">
+		<div class="card">
+			<div class="card-block">
+				<h1 class="card-title">Pure Javascript Issue Tracker</h1>
+				<p class="card-subtitle text-muted">By <a href="http://www.gabrielfreire.com.br" target="_blank">www.gabrielfreire.com.br</a></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron">
+					<form id="issueForm">
+						<h2>Add Issue: </h2>
+						<div class="form-group">
+							<label for="issueDescription">Description</label>
+							<input type="text" class="form-control" name="issueDescription" id="issueDescription" placeholder="Describe your issue">
+						</div>
+						<div class="form-group">
+							<label for="issueName">Severity</label>
+							<select id="issueSeverity" class="form-control">
+								<option value"Low">Low</option>
+								<option value"Medium">Medium</option>
+								<option value"High">High</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="issueAssignTo">Assigned To</label>
+							<input type="text" class="form-control" name="issueAssignTo" id="issueAssignTo" placeholder="Enter responsible...">
+						</div>
+						<button type="submit" id="btn-submit" class="btn btn-lg btn-success">Submit</button>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div id="issuesList">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- chancejs -->
+	<script src="http://chancejs.com/chance.min.js"></script>
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<!-- tether -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="content/js/bootstrap.js"></script>
+	<!-- Main javascript file -->
+	<script src="main.js"></script>
+</body>
+</html>
